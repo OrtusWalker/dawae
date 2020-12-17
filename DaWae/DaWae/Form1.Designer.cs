@@ -54,7 +54,7 @@
             this.authPanel.Controls.Add(this.button1);
             this.authPanel.Controls.Add(this.textBox1);
             this.authPanel.Controls.Add(this.textBox2);
-            this.authPanel.Location = new System.Drawing.Point(737, 233);
+            this.authPanel.Location = new System.Drawing.Point(674, 217);
             this.authPanel.Name = "authPanel";
             this.authPanel.Size = new System.Drawing.Size(214, 266);
             this.authPanel.TabIndex = 2;
