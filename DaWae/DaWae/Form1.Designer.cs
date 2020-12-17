@@ -1,6 +1,6 @@
 ﻿namespace DaWae
 {
-    partial class MainForm
+    partial class Form1
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // MainForm
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "MainForm";
+            this.ClientSize = new System.Drawing.Size(1048, 563);
+            this.Name = "Form1";
             this.Text = "DaWae";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
