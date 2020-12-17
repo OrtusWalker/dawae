@@ -18,7 +18,7 @@ namespace DaWae.Scripts
         string strHostName = "";
         public string hrefurl12was()
         {
-            return "wh-187941.ds-host.ru/";
+            return "http://wh-187941.ds-host.ru/";
         }
         /*
         Functions c50bc0dd8a7e3b4d = new Functions();
@@ -186,7 +186,7 @@ namespace DaWae.Scripts
                 return false;
             }
         }
-        public string auth(ref string nick, ref string password, string keycode)
+        public string auth(string nick, string password, string keycode)
         {
             try
             {
@@ -211,13 +211,13 @@ namespace DaWae.Scripts
                 var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
                 return (responseString);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                MessageBox.Show($"Exception#1:client-server", "Error");
+                MessageBox.Show($"Exception#1:client-server\r\n {e}", "Error");
                 return ("Error");
             }
         }
-        public string register(ref string nick, ref string password, string keycode)
+        public string register(string nick, string password, string keycode)
         {
             try
             {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NonSuch
+namespace DaWae.Scripts
 {
     
     public partial class Design
@@ -21,10 +21,10 @@ namespace NonSuch
             panel.Width = 560;
             panel.Height = 370;
         }
-        public void centerPanel(ref Panel panel, ref Form form)
+        public void centerPanel(ref Panel panel, int height, int width)
         {
-            panel.Left = (Form.ActiveForm.Width / 2) - panel.Width;
-            panel.Top = (Form.ActiveForm.Height / 2) - panel.Height;
+            panel.Left = width / 2 + panel.Width/2;
+            panel.Top = height / 2 + panel.Height/2;
             panel.Width = 200;
             panel.Height = 272;
         }
