@@ -59,7 +59,7 @@ namespace DaWae
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            // design.centerPanel(ref authPanel, ActiveForm.Height, ActiveForm.Width);
+            design.centerPanel(ref authPanel, ActiveForm.Height, ActiveForm.Width);
         }
     }
 }
