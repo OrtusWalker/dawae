@@ -21,10 +21,10 @@ namespace DaWae.Scripts
             panel.Width = 560;
             panel.Height = 370;
         }
-        public void centerPanel(ref Panel panel, int height, int width)
+        public void centerPanel(ref Panel panel, int height, int width) //Центрировать панель
         {
-            panel.Left = width / 2 + panel.Width/2;
-            panel.Top = height / 2 + panel.Height/2;
+            panel.Left = width / 2 - panel.Width/2;
+            panel.Top = height / 2 - panel.Height/2;
             panel.Width = 200;
             panel.Height = 272;
         }
