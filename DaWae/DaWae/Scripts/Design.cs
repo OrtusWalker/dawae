@@ -25,8 +25,8 @@ namespace DaWae.Scripts
         {
             panel.Left = width / 2 - panel.Width/2;
             panel.Top = height / 2 - panel.Height/2;
-            panel.Width = 200;
-            panel.Height = 272;
+            //panel.Width = 200;
+            //panel.Height = 272;
         }
         public void ResetRegisterPanel(ref Panel panel)
         {

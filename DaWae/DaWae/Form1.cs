@@ -26,40 +26,69 @@ namespace DaWae
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Form1_Resize(object sender, EventArgs e)
         {
-            if (client.auth(textBox1.Text, textBox2.Text, keycode).Contains("Successful"))
+            if (ActiveForm.Height > 0)
             {
-                label1.Text = $"Signin:\r\n{client.auth(textBox1.Text, textBox2.Text, keycode)}";
+                design.centerPanel(ref authPanel, ActiveForm.Height, ActiveForm.Width);
+                design.centerPanel(ref registerPanel, ActiveForm.Height, ActiveForm.Width);
             }
-            else
-            {
-                label1.Text = $"Signin denied:\r\n{client.auth(textBox1.Text, textBox2.Text, keycode)}";
-            }
+            
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Form1_ResizeBegin(object sender, EventArgs e)
         {
-            if (client.nickdupe(textBox1.Text, keycode).Contains("Successful"))
+            //authPanel.Visible = false;
+        }
+
+        private void Form1_ResizeEnd(object sender, EventArgs e)
+        {
+            //authPanel.Visible = true;
+        }
+
+        private void signupButton_Click(object sender, EventArgs e)
+        {
+            design.centerPanel(ref registerPanel, ActiveForm.Height, ActiveForm.Width);
+            authPanel.Visible = false;
+            registerPanel.Visible = true;
+        }
+
+        private void registerButton_Click(object sender, EventArgs e)
+        {
+            if (client.nickdupe(signinTextLogin.Text, keycode).Contains("Successful"))
             {
-                if (client.register(textBox1.Text, textBox2.Text, keycode).Contains("Successful"))
+                if (client.register(signinTextLogin.Text, signinTextPassword.Text, keycode).Contains("Successful"))
                 {
-                    label1.Text = $"Signup:\r\n{client.auth(textBox1.Text, textBox2.Text, keycode)}";
+                    label1.Text = $"Signup:\r\n{client.auth(signinTextLogin.Text, signinTextPassword.Text, keycode)}";
                 }
                 else
                 {
-                    label1.Text = $"Signup denied:\r\n{client.auth(textBox1.Text, textBox2.Text, keycode)}";
+                    label1.Text = $"Signup denied:\r\n{client.auth(signinTextLogin.Text, signinTextPassword.Text, keycode)}";
                 }
             }
             else
             {
-                label1.Text = $"Signup denied:\r\n{client.auth(textBox1.Text, textBox2.Text, keycode)}";
+                label1.Text = $"Signup denied:\r\n{client.auth(signinTextLogin.Text, signinTextPassword.Text, keycode)}";
             }
         }
 
-        private void Form1_Resize(object sender, EventArgs e)
+        private void signinButton_Click(object sender, EventArgs e)
+        {
+            if (client.auth(signinTextLogin.Text, signinTextPassword.Text, keycode).Contains("Successful"))
+            {
+                label1.Text = $"Signup:\r\n{client.auth(signinTextLogin.Text, signinTextPassword.Text, keycode)}";
+            }
+            else
+            {
+                label1.Text = $"Signup denied:\r\n{client.auth(signinTextLogin.Text, signinTextPassword.Text, keycode)}";
+            }
+        }
+
+        private void registerButtonCancel_Click(object sender, EventArgs e)
         {
             design.centerPanel(ref authPanel, ActiveForm.Height, ActiveForm.Width);
+            registerPanel.Visible = false;
+            authPanel.Visible = true;
         }
     }
 }
