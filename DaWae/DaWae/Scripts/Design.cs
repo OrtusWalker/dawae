@@ -130,15 +130,15 @@ namespace DaWae.Scripts
             ////Белые точки
             for (int i = 0; i < Width; ++i)
                 for (int j = 0; j < Height; ++j)
-                    if (rnd.Next() % 20 == 0)
+                    if (rnd.Next() % 60 == 0)
                         result.SetPixel(i, j, Color.White);
             for (int i = 0; i < Width; ++i)
                 for (int j = 0; j < Height; ++j)
-                    if (rnd.Next() % 20 == 0)
+                    if (rnd.Next() % 60 == 0)
                         result.SetPixel(i, j, Color.DarkBlue);
             for (int i = 0; i < Width; ++i)
                 for (int j = 0; j < Height; ++j)
-                    if (rnd.Next() % 20 == 0)
+                    if (rnd.Next() % 60 == 0)
                         result.SetPixel(i, j, Color.Black);
 
             return result;

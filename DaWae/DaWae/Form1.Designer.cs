@@ -37,18 +37,20 @@
             this.signinTextPassword = new System.Windows.Forms.TextBox();
             this.signinTextLogin = new System.Windows.Forms.TextBox();
             this.registerPanel = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.registerLabelPassword = new System.Windows.Forms.Label();
+            this.registerLabelLogin = new System.Windows.Forms.Label();
             this.registerButton = new System.Windows.Forms.Button();
             this.registerTextPassword = new System.Windows.Forms.TextBox();
             this.registerTextLogin = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.registerLabelPassword2 = new System.Windows.Forms.Label();
             this.registerTextPassword2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.registerLabelCaptcha = new System.Windows.Forms.Label();
             this.registerTextCaptcha = new System.Windows.Forms.TextBox();
             this.registerButtonCancel = new System.Windows.Forms.Button();
+            this.registerPictureCaptcha = new System.Windows.Forms.PictureBox();
             this.authPanel.SuspendLayout();
             this.registerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.registerPictureCaptcha)).BeginInit();
             this.SuspendLayout();
             // 
             // authPanel
@@ -139,13 +141,14 @@
             // 
             this.registerPanel.BackColor = System.Drawing.Color.Transparent;
             this.registerPanel.BackgroundImage = global::DaWae.Properties.Resources.background_shadow;
+            this.registerPanel.Controls.Add(this.registerPictureCaptcha);
             this.registerPanel.Controls.Add(this.registerButtonCancel);
-            this.registerPanel.Controls.Add(this.label6);
+            this.registerPanel.Controls.Add(this.registerLabelCaptcha);
             this.registerPanel.Controls.Add(this.registerTextCaptcha);
-            this.registerPanel.Controls.Add(this.label7);
+            this.registerPanel.Controls.Add(this.registerLabelPassword2);
             this.registerPanel.Controls.Add(this.registerTextPassword2);
-            this.registerPanel.Controls.Add(this.label4);
-            this.registerPanel.Controls.Add(this.label5);
+            this.registerPanel.Controls.Add(this.registerLabelPassword);
+            this.registerPanel.Controls.Add(this.registerLabelLogin);
             this.registerPanel.Controls.Add(this.registerButton);
             this.registerPanel.Controls.Add(this.registerTextPassword);
             this.registerPanel.Controls.Add(this.registerTextLogin);
@@ -155,27 +158,27 @@
             this.registerPanel.TabIndex = 3;
             this.registerPanel.Visible = false;
             // 
-            // label4
+            // registerLabelPassword
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label4.Location = new System.Drawing.Point(66, 63);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Password:";
+            this.registerLabelPassword.AutoSize = true;
+            this.registerLabelPassword.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.registerLabelPassword.Location = new System.Drawing.Point(66, 63);
+            this.registerLabelPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.registerLabelPassword.Name = "registerLabelPassword";
+            this.registerLabelPassword.Size = new System.Drawing.Size(56, 13);
+            this.registerLabelPassword.TabIndex = 5;
+            this.registerLabelPassword.Text = "Password:";
             // 
-            // label5
+            // registerLabelLogin
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label5.Location = new System.Drawing.Point(66, 23);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Login:";
+            this.registerLabelLogin.AutoSize = true;
+            this.registerLabelLogin.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.registerLabelLogin.Location = new System.Drawing.Point(66, 23);
+            this.registerLabelLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.registerLabelLogin.Name = "registerLabelLogin";
+            this.registerLabelLogin.Size = new System.Drawing.Size(36, 13);
+            this.registerLabelLogin.TabIndex = 4;
+            this.registerLabelLogin.Text = "Login:";
             // 
             // registerButton
             // 
@@ -201,16 +204,16 @@
             this.registerTextLogin.Size = new System.Drawing.Size(125, 20);
             this.registerTextLogin.TabIndex = 0;
             // 
-            // label7
+            // registerLabelPassword2
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label7.Location = new System.Drawing.Point(66, 103);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 13);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Confirm password:";
+            this.registerLabelPassword2.AutoSize = true;
+            this.registerLabelPassword2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.registerLabelPassword2.Location = new System.Drawing.Point(66, 103);
+            this.registerLabelPassword2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.registerLabelPassword2.Name = "registerLabelPassword2";
+            this.registerLabelPassword2.Size = new System.Drawing.Size(93, 13);
+            this.registerLabelPassword2.TabIndex = 7;
+            this.registerLabelPassword2.Text = "Confirm password:";
             // 
             // registerTextPassword2
             // 
@@ -219,16 +222,16 @@
             this.registerTextPassword2.Size = new System.Drawing.Size(125, 20);
             this.registerTextPassword2.TabIndex = 6;
             // 
-            // label6
+            // registerLabelCaptcha
             // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label6.Location = new System.Drawing.Point(66, 221);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Captcha:";
+            this.registerLabelCaptcha.AutoSize = true;
+            this.registerLabelCaptcha.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.registerLabelCaptcha.Location = new System.Drawing.Point(66, 221);
+            this.registerLabelCaptcha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.registerLabelCaptcha.Name = "registerLabelCaptcha";
+            this.registerLabelCaptcha.Size = new System.Drawing.Size(50, 13);
+            this.registerLabelCaptcha.TabIndex = 9;
+            this.registerLabelCaptcha.Text = "Captcha:";
             // 
             // registerTextCaptcha
             // 
@@ -246,6 +249,15 @@
             this.registerButtonCancel.Text = "Cancel";
             this.registerButtonCancel.UseVisualStyleBackColor = true;
             this.registerButtonCancel.Click += new System.EventHandler(this.registerButtonCancel_Click);
+            // 
+            // registerPictureCaptcha
+            // 
+            this.registerPictureCaptcha.Location = new System.Drawing.Point(59, 150);
+            this.registerPictureCaptcha.Name = "registerPictureCaptcha";
+            this.registerPictureCaptcha.Size = new System.Drawing.Size(143, 68);
+            this.registerPictureCaptcha.TabIndex = 11;
+            this.registerPictureCaptcha.TabStop = false;
+            this.registerPictureCaptcha.Click += new System.EventHandler(this.registerPictureCaptcha_Click);
             // 
             // Form1
             // 
@@ -268,6 +280,7 @@
             this.authPanel.PerformLayout();
             this.registerPanel.ResumeLayout(false);
             this.registerPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.registerPictureCaptcha)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -282,16 +295,17 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel registerPanel;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label registerLabelCaptcha;
         private System.Windows.Forms.TextBox registerTextCaptcha;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label registerLabelPassword2;
         private System.Windows.Forms.TextBox registerTextPassword2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label registerLabelPassword;
+        private System.Windows.Forms.Label registerLabelLogin;
         private System.Windows.Forms.Button registerButton;
         private System.Windows.Forms.TextBox registerTextPassword;
         private System.Windows.Forms.TextBox registerTextLogin;
         private System.Windows.Forms.Button registerButtonCancel;
+        private System.Windows.Forms.PictureBox registerPictureCaptcha;
     }
 }
 
