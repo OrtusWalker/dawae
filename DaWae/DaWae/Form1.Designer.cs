@@ -39,13 +39,14 @@
             // 
             // authPanel
             // 
-            this.authPanel.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.authPanel.BackColor = System.Drawing.Color.Transparent;
+            this.authPanel.BackgroundImage = global::DaWae.Properties.Resources.background_shadow;
             this.authPanel.Controls.Add(this.label1);
             this.authPanel.Controls.Add(this.button2);
             this.authPanel.Controls.Add(this.button1);
             this.authPanel.Controls.Add(this.textBox2);
             this.authPanel.Controls.Add(this.textBox1);
-            this.authPanel.Location = new System.Drawing.Point(432, 151);
+            this.authPanel.Location = new System.Drawing.Point(400, 139);
             this.authPanel.Name = "authPanel";
             this.authPanel.Size = new System.Drawing.Size(214, 266);
             this.authPanel.TabIndex = 2;
@@ -53,6 +54,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(42, 182);
             this.label1.MinimumSize = new System.Drawing.Size(128, 64);
             this.label1.Name = "label1";
@@ -99,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BackgroundImage = global::DaWae.Properties.Resources.background_mainmenu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(984, 551);

@@ -63,16 +63,6 @@ namespace DaWae.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _143304_noch_krasnyj_cvet_nebo_svet_voda_2560x1440 {
-            get {
-                object obj = ResourceManager.GetObject("143304-noch-krasnyj_cvet-nebo-svet-voda-2560x1440", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap background_mainmenu {
             get {
                 object obj = ResourceManager.GetObject("background_mainmenu", resourceCulture);
