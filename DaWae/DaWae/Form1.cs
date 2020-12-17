@@ -40,9 +40,16 @@ namespace DaWae
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (client.register(textBox1.Text, textBox2.Text, keycode).Contains("Successful"))
+            if (client.nickdupe(textBox1.Text, keycode).Contains("Successful"))
             {
-                label1.Text = $"Signup:\r\n{client.auth(textBox1.Text, textBox2.Text, keycode)}";
+                if (client.register(textBox1.Text, textBox2.Text, keycode).Contains("Successful"))
+                {
+                    label1.Text = $"Signup:\r\n{client.auth(textBox1.Text, textBox2.Text, keycode)}";
+                }
+                else
+                {
+                    label1.Text = $"Signup denied:\r\n{client.auth(textBox1.Text, textBox2.Text, keycode)}";
+                }
             }
             else
             {
