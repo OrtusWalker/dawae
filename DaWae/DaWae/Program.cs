@@ -16,7 +16,7 @@ namespace DaWae
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false); // JOPA
-            Application.Run(new MainForm());
+            Application.Run(new Form1());
         }
     }
 }
