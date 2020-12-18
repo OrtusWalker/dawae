@@ -23,7 +23,7 @@ namespace DaWae.Scripts
         {
             if (remind)
             {
-                using (StreamWriter text = new FileInfo("game.dat").CreateText())
+                using (StreamWriter text = new FileInfo("profile.dat").CreateText())
                 {
                     text.WriteLine(nickname);
                     text.WriteLine(this.Encrypt(password, this.c38eeac2fadbff9e4ba31, this.a697570462f7565f23a0b2650653b81, this.hashAlgorithm, this.passwordIterations, this.f5f23a0b2650653b81, this.keySize));
@@ -33,7 +33,7 @@ namespace DaWae.Scripts
             }
             else
             {
-                using (StreamWriter text = new FileInfo("game.dat").CreateText())
+                using (StreamWriter text = new FileInfo("profile.dat").CreateText())
                 {
                     text.WriteLine("");
                     text.WriteLine("");

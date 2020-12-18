@@ -278,5 +278,67 @@ namespace DaWae.Scripts
                 return ("Error");
             }
         }
+        public string sendmessage(string nick, string keycode, string message)
+        {
+            try
+            {
+                var request = (HttpWebRequest)WebRequest.Create($"{hrefurl12was()}nonsuch/nschat_sendmessage.php");
+                request.Timeout = 120000;
+                var postData = "btn_auth=True";
+                postData += "&login=" + nick;
+                postData += "&message=" + message;
+                postData += "&date=" + DateTime.Now.ToString();
+                postData += "&pcuser=" + strHostName;
+                postData += "&keycode=" + keycode;
+                var dat = Encoding.ASCII.GetBytes(postData);
+                request.Method = "POST";
+                request.ContentType = "application/x-www-form-urlencoded";
+                request.ContentLength = dat.Length;
+
+                using (var stream = request.GetRequestStream())
+                {
+                    stream.Write(dat, 0, dat.Length);
+                }
+                var response = (HttpWebResponse)request.GetResponse();
+                var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
+                return (responseString);
+            }
+            catch (Exception)
+            {
+                //MessageBox.Show($"Exception#1:client-server", "Error");
+                return ("Error");
+            }
+        }
+        public string getmessage(string nick, string keycode, string startdate)
+        {
+            try
+            {
+                var request = (HttpWebRequest)WebRequest.Create($"{hrefurl12was()}nonsuch/nschat_getmessage.php");
+                request.Timeout = 120000;
+                var postData = "btn_auth=True";
+                postData += "&login=" + nick;
+                postData += "&date=" + DateTime.Now.ToString();
+                postData += "&startdate=" + startdate;
+                postData += "&pcuser=" + strHostName;
+                postData += "&keycode=" + keycode;
+                var dat = Encoding.ASCII.GetBytes(postData);
+                request.Method = "POST";
+                request.ContentType = "application/x-www-form-urlencoded";
+                request.ContentLength = dat.Length;
+
+                using (var stream = request.GetRequestStream())
+                {
+                    stream.Write(dat, 0, dat.Length);
+                }
+                var response = (HttpWebResponse)request.GetResponse();
+                var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
+                return (responseString);
+            }
+            catch (Exception)
+            {
+                //MessageBox.Show($"Exception#1:client-server", "Error");
+                return ("Error");
+            }
+        }
     }
 }

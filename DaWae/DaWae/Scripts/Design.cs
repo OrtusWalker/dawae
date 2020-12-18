@@ -14,17 +14,15 @@ namespace DaWae.Scripts
     public partial class Design
     {
         int left = 50; //Смещение панелей из-за уменьшенного размера формы (дефолт ширины формы = 900, дефолт left = 0)
-        public void ResetUpdatePanel(ref Panel panel)
+        public void ResetPersonalAccountPanel(ref Panel panel)
         {
-            panel.Left = 170 - left;
-            panel.Top = 45;
-            panel.Width = 560;
-            panel.Height = 370;
+            panel.Width = 650;
+            panel.Height = 350;
         }
         public void centerPanel(ref Panel panel, int height, int width) //Центрировать панель
         {
-            panel.Left = width / 2 - panel.Width/2;
-            panel.Top = height / 2 - panel.Height/2;
+            panel.Left = (width / 2) - (panel.Width/2);
+            panel.Top = (height / 2) - (panel.Height/2);
             //panel.Width = 200;
             //panel.Height = 272;
         }
@@ -35,12 +33,12 @@ namespace DaWae.Scripts
             panel.Width = 300;
             panel.Height = 300;
         }
-        public void ResetSignupPanel(ref Panel panel)
+        public void ResetSigninPanel(ref Panel panel)
         {
-            panel.Left = 385 - left;
-            panel.Top = 185;
-            panel.Width = 131;
-            panel.Height = 159;
+            panel.Left = 290;
+            panel.Top = 90;
+            panel.Width = 214;
+            panel.Height = 266;
         }
         public Bitmap AlphaBlending(Bitmap x, Bitmap y, byte s) // Для правильного рендера скина с !альфа каналом! Наложение двух картинок с альфа каналом.
         {

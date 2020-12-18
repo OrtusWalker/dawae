@@ -62,7 +62,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scripts\clientserver.cs" />
     <Compile Include="Scripts\Design.cs" />
+    <Compile Include="Scripts\FtpClient.cs" />
     <Compile Include="Scripts\Functions.cs" />
+    <Compile Include="Scripts\lang.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +102,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background_mainmenu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shirt-1516110388-f933f4e085414d8c606fa0a9b0a6f164.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

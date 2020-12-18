@@ -79,5 +79,15 @@ namespace DaWae.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shirt_1516110388_f933f4e085414d8c606fa0a9b0a6f164 {
+            get {
+                object obj = ResourceManager.GetObject("shirt-1516110388-f933f4e085414d8c606fa0a9b0a6f164", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
